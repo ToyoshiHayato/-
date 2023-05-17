@@ -1,25 +1,14 @@
-<p>
-    <strong>Title:</strong>
-    リーダブルコード
-</p>
-<p>
-    <strong>Body:</strong>
-    より良いコードを書くためのシンプルで実践的なテクニック
-</p>
-<a href="/books/1/edit">Edit</a>
-|
-<a href="/books">Back</a>
-</p>
+<strong>Title:</strong>
+<p><%= @book.title %></p>
 
-<p>
-    <strong>Title:</strong>
-    トラブル知らずのシステム設計
-</p>
-<p>
-    <strong>Body:</strong>
-    システム設計の要点を図解で説明してくれます
-</p>
-<a href="/books/2/edit">Edit</a>
+<strong>Body:</strong>
+<p><%= @book.body %></p>
+
+    <span>
+     <%= link_to "Edit", "/books/#{@book.id}/edit" %>
+    </span>
 |
-<a href="/books">Back</a>
-</p>
+    <span>
+      <%= link_to "Back", "/books" %>  
+    </span>
+

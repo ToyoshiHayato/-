@@ -1,17 +1,20 @@
 <h1>Editing Book</h1>
+<%= form_with model: @book,  method: :patch do |f| %>
 <!-- form_with部分-->
-<%= form_with model: Book.new do |f| %>
 <p>Title</p>
 <%= f.text_field :title %>
 
 
 <p>Body</p>
 <%= f.text_area :body %>
-<textarea>より良いコードを書くためのシンプルで実践的なテクニック</textarea>
 
 <%= f.submit 'Update Book' %>
 <% end %>
 
-<a href="/books/1">Show</a>
+<span>
+<%= link_to "Show", "/books/#{@book.id}" %>
+</span>
 |
-<a href="/books">Back</a>
+<span>
+    <%= link_to "Back", "/books" %>
+</span>
