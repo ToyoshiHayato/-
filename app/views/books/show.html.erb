@@ -1,8 +1,16 @@
-<strong>Title:</strong>
-<p><%= @book.title %></p>
 
+<%=   flash[:hoge]  %>
+<p>
+<strong>Title:</strong>
+
+    <%= @book.title %>
+</p>
+
+<p>
 <strong>Body:</strong>
-<p><%= @book.body %></p>
+
+    <%= @book.body %>
+</p>
 
     <span>
      <%= link_to "Edit", "/books/#{@book.id}/edit" %>
